@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  face_to_all:
+    container_name: face_to_all
+    image: maximofn/face_to_all:1.0.1
+    build: .
+    runtime: nvidia
+    network_mode: "host"
+    volumes:
+      - ./hub:/root/.cache/huggingface/hub
+    tty: true
+    stdin_open: true

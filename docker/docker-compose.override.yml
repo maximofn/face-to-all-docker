@@ -1,0 +1,5 @@
+version: "3.8"
+
+services:
+  face_to_all:
+    entrypoint: ["bash", "-c", "python app.py"]
